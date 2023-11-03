@@ -45,7 +45,7 @@ class WeatherView: UIView {
         super.init(frame: frame)
         
         setupViews()
-        setContraints()
+        setConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -68,7 +68,7 @@ class WeatherView: UIView {
 
 extension WeatherView {
 
-    private func setContraints() {
+    private func setConstraints() {
 
         NSLayoutConstraint.activate([
             //weatherIconImageView

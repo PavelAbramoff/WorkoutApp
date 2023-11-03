@@ -57,6 +57,14 @@ class ViewController: UIViewController {
         
         setupViews()
         setConstraints()
+        
+        for famyly in UIFont.familyNames {
+            print("\(famyly)")
+            
+            for name in UIFont.fontNames(forFamilyName: famyly) {
+                print(" \(name)")
+            }
+        }
     }
     
     private func setupViews() {
