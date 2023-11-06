@@ -31,6 +31,10 @@
 		12A7A7D92AF823A60028CE0F /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7D82AF823A60028CE0F /* MainTableView.swift */; };
 		12A7A7DB2AF82A1E0028CE0F /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7DA2AF82A1E0028CE0F /* WorkoutTableViewCell.swift */; };
 		12A7A7DD2AF8423D0028CE0F /* UIStackView + Extancsons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7DC2AF8423D0028CE0F /* UIStackView + Extancsons.swift */; };
+		12A7A7E32AF880DC0028CE0F /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7E22AF880DC0028CE0F /* StatisticViewController.swift */; };
+		12A7A7E52AF888490028CE0F /* StatisticTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7E42AF888490028CE0F /* StatisticTableView.swift */; };
+		12A7A7E72AF889330028CE0F /* StatisticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7E62AF889330028CE0F /* StatisticTableViewCell.swift */; };
+		12A7A7EA2AF8B6980028CE0F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7E92AF8B6980028CE0F /* MainTabBarController.swift */; };
 		12ACC9D32AF814A600D5DBB8 /* UILabel + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ACC9D22AF814A600D5DBB8 /* UILabel + Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +80,10 @@
 		12A7A7D82AF823A60028CE0F /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
 		12A7A7DA2AF82A1E0028CE0F /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		12A7A7DC2AF8423D0028CE0F /* UIStackView + Extancsons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extancsons.swift"; sourceTree = "<group>"; };
+		12A7A7E22AF880DC0028CE0F /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
+		12A7A7E42AF888490028CE0F /* StatisticTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTableView.swift; sourceTree = "<group>"; };
+		12A7A7E62AF889330028CE0F /* StatisticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTableViewCell.swift; sourceTree = "<group>"; };
+		12A7A7E92AF8B6980028CE0F /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		12ACC9D22AF814A600D5DBB8 /* UILabel + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,7 +136,10 @@
 			isa = PBXGroup;
 			children = (
 				124DB1502AE8F341003F0370 /* Applicaton */,
+				12A7A7E82AF8B6640028CE0F /* NavigationModule */,
 				124DB1512AE8F358003F0370 /* MainModule */,
+				12A7A7EB2AF8C0030028CE0F /* NewWorkooutModule */,
+				12A7A7DE2AF8801B0028CE0F /* StatisticModule */,
 				124DB1522AE8F36F003F0370 /* Extansions */,
 				124DB14F2AE8F32A003F0370 /* SupportingFiles */,
 			);
@@ -245,6 +256,71 @@
 				1268E2C42AF4B55F00ED3FC3 /* Roboto-Medium.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		12A7A7DE2AF8801B0028CE0F /* StatisticModule */ = {
+			isa = PBXGroup;
+			children = (
+				12A7A7DF2AF880790028CE0F /* Views */,
+				12A7A7E02AF880890028CE0F /* Controllers */,
+			);
+			name = StatisticModule;
+			sourceTree = "<group>";
+		};
+		12A7A7DF2AF880790028CE0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				12A7A7E42AF888490028CE0F /* StatisticTableView.swift */,
+				12A7A7E12AF880A00028CE0F /* Cells */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		12A7A7E02AF880890028CE0F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				12A7A7E22AF880DC0028CE0F /* StatisticViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		12A7A7E12AF880A00028CE0F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				12A7A7E62AF889330028CE0F /* StatisticTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		12A7A7E82AF8B6640028CE0F /* NavigationModule */ = {
+			isa = PBXGroup;
+			children = (
+				12A7A7E92AF8B6980028CE0F /* MainTabBarController.swift */,
+			);
+			name = NavigationModule;
+			sourceTree = "<group>";
+		};
+		12A7A7EB2AF8C0030028CE0F /* NewWorkooutModule */ = {
+			isa = PBXGroup;
+			children = (
+				12A7A7EC2AF8C01A0028CE0F /* Views */,
+				12A7A7ED2AF8C0280028CE0F /* Controllers */,
+			);
+			name = NewWorkooutModule;
+			sourceTree = "<group>";
+		};
+		12A7A7EC2AF8C01A0028CE0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		12A7A7ED2AF8C0280028CE0F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,7 +461,9 @@
 			files = (
 				124DB15B2AE8F47E003F0370 /* CalendarCollectionView.swift in Sources */,
 				12ACC9D32AF814A600D5DBB8 /* UILabel + Extensions.swift in Sources */,
+				12A7A7EA2AF8B6980028CE0F /* MainTabBarController.swift in Sources */,
 				124DB1242AE8E064003F0370 /* MainViewController.swift in Sources */,
+				12A7A7E32AF880DC0028CE0F /* StatisticViewController.swift in Sources */,
 				124DB1202AE8E064003F0370 /* AppDelegate.swift in Sources */,
 				124DB1602AE8F4DC003F0370 /* UIColor + Extensions.swift in Sources */,
 				124DB16A2AE8F76C003F0370 /* CalendarCollectionViewCell.swift in Sources */,
@@ -396,6 +474,8 @@
 				124DB15D2AE8F49F003F0370 /* WeatherView.swift in Sources */,
 				124DB1592AE8F459003F0370 /* CalendarView.swift in Sources */,
 				124DB1642AE8F517003F0370 /* UIView + Extensions.swift in Sources */,
+				12A7A7E72AF889330028CE0F /* StatisticTableViewCell.swift in Sources */,
+				12A7A7E52AF888490028CE0F /* StatisticTableView.swift in Sources */,
 				124DB1222AE8E064003F0370 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
