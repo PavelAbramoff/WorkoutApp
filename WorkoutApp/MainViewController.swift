@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  WorkoutApp
 //
 //  Created by Pavel Абрамов on 2023-10-24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     private let userPhotoImageView: UIImageView = {
         let imageView = UIImageView()
@@ -47,6 +47,8 @@ class ViewController: UIViewController {
     
     private let calendarView = CalendarView()
     private let weatherView = WeatherView()
+    private let workoutTodayLabel = UILabel(text: "Workout today")
+    private let tableView = MainTableView()
     
     override func viewDidLayoutSubviews() {
         userPhotoImageView.layer.cornerRadius = userPhotoImageView.frame.width / 2
@@ -58,13 +60,6 @@ class ViewController: UIViewController {
         setupViews()
         setConstraints()
         
-        for famyly in UIFont.familyNames {
-            print("\(famyly)")
-            
-            for name in UIFont.fontNames(forFamilyName: famyly) {
-                print(" \(name)")
-            }
-        }
     }
     
     private func setupViews() {
@@ -75,6 +70,8 @@ class ViewController: UIViewController {
         view.addSubview(userNameLabel)
         view.addSubview(addWorkoutButton)
         view.addSubview(weatherView)
+        view.addSubview(workoutTodayLabel)
+        view.addSubview(tableView)
     }
     
     @objc private func addWorkoutButtonTapped() {
@@ -84,7 +81,7 @@ class ViewController: UIViewController {
 
 //MARK: - Set Constraints
 
-extension ViewController {
+extension MainViewController {
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
@@ -110,7 +107,16 @@ extension ViewController {
             weatherView.topAnchor.constraint(equalTo: calendarView.bottomAnchor, constant: 5),
             weatherView.leadingAnchor.constraint(equalTo: addWorkoutButton.trailingAnchor, constant: 10),
             weatherView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            weatherView.heightAnchor.constraint(equalToConstant: 80)
+            weatherView.heightAnchor.constraint(equalToConstant: 80),
+            
+            workoutTodayLabel.topAnchor.constraint(equalTo: addWorkoutButton.bottomAnchor, constant: 10),
+            workoutTodayLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            workoutTodayLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            
+            tableView.topAnchor.constraint(equalTo: workoutTodayLabel.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
 }
