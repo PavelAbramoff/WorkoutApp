@@ -14,8 +14,17 @@ class NewWorkoutViewsController: UIViewController {
                                           textColor: .specialGray)
     
     private lazy var closeButton = CloseButton(type: .system)
+    
     private let nameView = NameView()
     private let dateAndRepearView = DataAndRepeatView()
+    private let repsOrTimerView = RepsOrTimerView()
+    private let saveButton = GreenButton(text: "SAVE")
+    
+    private lazy var stackView = UIStackView(arrangedSubviews: [nameView,
+                                                               dateAndRepearView,
+                                                               repsOrTimerView],
+                                             axis: .vertical,
+                                             spacinng: 20)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +36,13 @@ class NewWorkoutViewsController: UIViewController {
     private func setupViews() {
         view.backgroundColor = .systemBackground
         newWorkoutLabel.textAlignment = .center
+        
         view.addSubview(newWorkoutLabel)
         closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
         view.addSubview(closeButton)
-        view.addSubview(nameView)
-        view.addSubview(dateAndRepearView)
+        view.addSubview(stackView)
+        view.addSubview(saveButton)
+
     }
     
     @objc private func closeButtonTapped() {
@@ -53,15 +64,17 @@ extension NewWorkoutViewsController {
             closeButton.widthAnchor.constraint(equalToConstant: 33),
             closeButton.heightAnchor.constraint(equalToConstant: 33),
             
-            nameView.topAnchor.constraint(equalTo: newWorkoutLabel.bottomAnchor,constant: 10),
-            nameView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            nameView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             nameView.heightAnchor.constraint(equalToConstant: 60),
+            dateAndRepearView.heightAnchor.constraint(equalToConstant: 115),
+            repsOrTimerView.heightAnchor.constraint(equalToConstant: 340),
             
-            dateAndRepearView.topAnchor.constraint(equalTo: nameView.bottomAnchor, constant: 10),
-            dateAndRepearView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            dateAndRepearView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            dateAndRepearView.heightAnchor.constraint(equalToConstant: 110),
+            stackView.topAnchor.constraint(equalTo: newWorkoutLabel.bottomAnchor, constant: 10),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            
+            saveButton.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 20),
+            saveButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            saveButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
             
         ])
     }

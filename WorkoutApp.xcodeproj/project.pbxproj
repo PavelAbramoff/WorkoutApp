@@ -40,6 +40,10 @@
 		12A7A7F42AFA0D160028CE0F /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7F32AFA0D160028CE0F /* NameView.swift */; };
 		12A7A7F62AFA0E480028CE0F /* BrownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7F52AFA0E480028CE0F /* BrownTextField.swift */; };
 		12A7A7F82AFB496C0028CE0F /* DataAndRepeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7F72AFB496C0028CE0F /* DataAndRepeatView.swift */; };
+		12A7A7FA2AFC7C460028CE0F /* GreenSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7F92AFC7C460028CE0F /* GreenSlider.swift */; };
+		12A7A7FD2AFC7DCC0028CE0F /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7FC2AFC7DCC0028CE0F /* SliderView.swift */; };
+		12A7A7FF2AFC8EA80028CE0F /* RepsOrTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7FE2AFC8EA80028CE0F /* RepsOrTimerView.swift */; };
+		12A7A8012AFCA4BC0028CE0F /* GreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A8002AFCA4BC0028CE0F /* GreenButton.swift */; };
 		12ACC9D32AF814A600D5DBB8 /* UILabel + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ACC9D22AF814A600D5DBB8 /* UILabel + Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +98,10 @@
 		12A7A7F32AFA0D160028CE0F /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
 		12A7A7F52AFA0E480028CE0F /* BrownTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownTextField.swift; sourceTree = "<group>"; };
 		12A7A7F72AFB496C0028CE0F /* DataAndRepeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAndRepeatView.swift; sourceTree = "<group>"; };
+		12A7A7F92AFC7C460028CE0F /* GreenSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenSlider.swift; sourceTree = "<group>"; };
+		12A7A7FC2AFC7DCC0028CE0F /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		12A7A7FE2AFC8EA80028CE0F /* RepsOrTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsOrTimerView.swift; sourceTree = "<group>"; };
+		12A7A8002AFCA4BC0028CE0F /* GreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenButton.swift; sourceTree = "<group>"; };
 		12ACC9D22AF814A600D5DBB8 /* UILabel + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -323,8 +331,10 @@
 		12A7A7EC2AF8C01A0028CE0F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				12A7A7FB2AFC7D870028CE0F /* SubViews */,
 				12A7A7F32AFA0D160028CE0F /* NameView.swift */,
 				12A7A7F72AFB496C0028CE0F /* DataAndRepeatView.swift */,
+				12A7A7FE2AFC8EA80028CE0F /* RepsOrTimerView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -342,8 +352,18 @@
 			children = (
 				12A7A7F12AFA00EC0028CE0F /* CloseButton.swift */,
 				12A7A7F52AFA0E480028CE0F /* BrownTextField.swift */,
+				12A7A7F92AFC7C460028CE0F /* GreenSlider.swift */,
+				12A7A8002AFCA4BC0028CE0F /* GreenButton.swift */,
 			);
 			name = Components;
+			sourceTree = "<group>";
+		};
+		12A7A7FB2AFC7D870028CE0F /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				12A7A7FC2AFC7DCC0028CE0F /* SliderView.swift */,
+			);
+			name = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,13 +503,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				124DB15B2AE8F47E003F0370 /* CalendarCollectionView.swift in Sources */,
+				12A7A7FF2AFC8EA80028CE0F /* RepsOrTimerView.swift in Sources */,
 				12ACC9D32AF814A600D5DBB8 /* UILabel + Extensions.swift in Sources */,
 				12A7A7F42AFA0D160028CE0F /* NameView.swift in Sources */,
 				12A7A7EF2AF8CA870028CE0F /* NewWorkoutViewsController.swift in Sources */,
+				12A7A7FD2AFC7DCC0028CE0F /* SliderView.swift in Sources */,
 				12A7A7EA2AF8B6980028CE0F /* MainTabBarController.swift in Sources */,
 				124DB1242AE8E064003F0370 /* MainViewController.swift in Sources */,
 				12A7A7E32AF880DC0028CE0F /* StatisticViewController.swift in Sources */,
 				124DB1202AE8E064003F0370 /* AppDelegate.swift in Sources */,
+				12A7A7FA2AFC7C460028CE0F /* GreenSlider.swift in Sources */,
 				124DB1602AE8F4DC003F0370 /* UIColor + Extensions.swift in Sources */,
 				12A7A7F62AFA0E480028CE0F /* BrownTextField.swift in Sources */,
 				124DB16A2AE8F76C003F0370 /* CalendarCollectionViewCell.swift in Sources */,
@@ -504,6 +527,7 @@
 				12A7A7F82AFB496C0028CE0F /* DataAndRepeatView.swift in Sources */,
 				12A7A7E72AF889330028CE0F /* StatisticTableViewCell.swift in Sources */,
 				12A7A7E52AF888490028CE0F /* StatisticTableView.swift in Sources */,
+				12A7A8012AFCA4BC0028CE0F /* GreenButton.swift in Sources */,
 				124DB1222AE8E064003F0370 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
