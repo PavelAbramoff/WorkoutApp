@@ -75,6 +75,15 @@ class DataAndRepeatView: UIView {
         addSubview(unitStackView)
 
     }
+    
+    func getDateAndRepeat() -> (date: Date, isRepeat: Bool) {
+        (datePicker.date, repeatSwitch.isOn)
+    }
+    
+    func resetDataAndReapeat() {
+        datePicker.date = Date()
+        repeatSwitch.isOn = true
+    }
 }
 
 extension DataAndRepeatView {

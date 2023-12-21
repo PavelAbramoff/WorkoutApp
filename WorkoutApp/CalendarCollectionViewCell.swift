@@ -60,6 +60,12 @@ class CalendarCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func dateForCell(numberOfDay: String, dayOfWeek: String) {
+        dayOfWeekLabel.text = dayOfWeek
+        numberOfDayLabel.text = numberOfDay
+        
+    }
 }
 
 //MARK: - Set Constraints

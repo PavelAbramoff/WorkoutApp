@@ -29,6 +29,10 @@ class CalendarView: UIView {
         
         addSubview(calendarCollectionView)
     }
+    
+    func setDelegate(_ delegate: CalendarViewProtocol) {
+        calendarCollectionView.calendarDelegate = delegate
+    }
 }
 
 //MARK: - Set Constraints

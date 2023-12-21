@@ -28,6 +28,15 @@ class NameView: UIView {
         addSubview(nameTextField)
         translatesAutoresizingMaskIntoConstraints = false
     }
+    
+    func getNAmeTextFieldText() -> String {
+        guard let text = nameTextField.text else { return "" }
+        return text
+    }
+    
+    func deleteTextTextfield() {
+        nameTextField.text = ""
+    }
 }
 
 extension NameView {
