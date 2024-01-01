@@ -9,6 +9,8 @@ import UIKit
 
 class MainTableView: UITableView {
     
+    private var workoutArray = [WorkouteModel]()
+    
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         
@@ -33,6 +35,10 @@ class MainTableView: UITableView {
         dataSource = self
         delegate = self
     }
+    
+    func setWorkoutArray(_ array: [WorkouteModel]) {
+        workoutArray = array
+    }
 }
 
 
@@ -40,13 +46,15 @@ class MainTableView: UITableView {
 
 extension MainTableView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        workoutArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: WorkoutTableViewCell.idTableViewCell, for: indexPath) as? WorkoutTableViewCell else {
             return UITableViewCell()
         }
+        let workoutModel = workoutArray[indexPath.row]
+        cell.configure(model: workoutModel)
         return cell
     }
 }

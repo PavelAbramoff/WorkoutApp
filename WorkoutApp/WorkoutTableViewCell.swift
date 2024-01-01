@@ -16,7 +16,7 @@ class WorkoutTableViewCell: UITableViewCell {
         view.backgroundColor = .specialBrown
         view.layer.cornerRadius = 10
         view.translatesAutoresizingMaskIntoConstraints = false
-       return view
+        return view
     }()
     
     private let workoutBackgroundView: UIView = {
@@ -24,7 +24,7 @@ class WorkoutTableViewCell: UITableViewCell {
         view.backgroundColor = .specialBackground
         view.layer.cornerRadius = 20
         view.translatesAutoresizingMaskIntoConstraints = false
-       return view
+        return view
     }()
     
     private let workoutImageView: UIImageView = {
@@ -78,6 +78,8 @@ class WorkoutTableViewCell: UITableViewCell {
     
     private var labelStackView = UIStackView()
     
+    private var workoutModel = WorkouteModel()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -93,7 +95,8 @@ class WorkoutTableViewCell: UITableViewCell {
         addSubview(workoutBackgroundView)
         workoutBackgroundView.addSubview(workoutImageView)
         addSubview(workoutNameLabel)
-        labelStackView = UIStackView(arrangedSubviews: [workoutRapsLabel, workoutSetsLabel], axis: .horizontal, spacinng: 10)
+        labelStackView = UIStackView(arrangedSubviews: [workoutRapsLabel, workoutSetsLabel], axis: .horizontal,
+            spacinng: 10)
         addSubview(labelStackView)
         contentView.addSubview(startButton)
     }
@@ -105,9 +108,40 @@ class WorkoutTableViewCell: UITableViewCell {
     @objc private func startButtonTapped() {
         print("START")
     }
+    
+    func configure(model: WorkouteModel) {
+        workoutModel = model
+        
+        workoutNameLabel.text = model.workoutName
+        
+        if model
+            .workoutTimer == 0 {
+            workoutRapsLabel.text = "Reps: \(model.workoutReps)"
+        } else {
+            workoutRapsLabel.text = "Time: \(model.workoutTimer.getTimeFromSecond())"
+            workoutSetsLabel.text = "Sets: \(model.workoutSets)"
+        }
+        if model.workoutStatus {
+            startButton.setTitle("COMPLETE", for: .normal)
+            startButton.tintColor = .white
+            startButton.backgroundColor = .specialDarkGreen
+            startButton.isEnabled = false
+        } else {
+            startButton.setTitle("START", for: .normal)
+            startButton.tintColor = .specialDarkGreen
+            startButton.backgroundColor = .specialYellow
+            startButton.isEnabled = true
+        }
+        guard let imageData = model.workoutImage,
+              let image = UIImage(data: imageData) else {
+            return
+        }
+        workoutImageView.image = image.withRenderingMode(.alwaysTemplate)
+    }
 }
 
 extension WorkoutTableViewCell {
+    
     private func setConstraints() {
         NSLayoutConstraint.activate([
             backgroundCell.topAnchor.constraint(equalTo: topAnchor, constant: 5),

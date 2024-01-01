@@ -42,4 +42,22 @@ extension Date {
     func offSetDay(days: Int) -> Date {
         Calendar.current.date(byAdding: .day, value: -days, to: self) ?? Date()
     }
+    
+    func startEndDate() -> (stsrt: Date, end: Date) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+        let calendar = Calendar.current
+        
+        let stringDate = formatter.string(from: self)
+        let totalDate = formatter.date(from: stringDate) ?? Date()
+        
+        let local = totalDate.localDate()
+        let dateEnd: Date = {
+            let companents = DateComponents(day: 1)
+            return calendar.date(byAdding: companents, to: local) ?? Date()
+        }()
+        
+        return (local, dateEnd)
+        
+    }
 }
