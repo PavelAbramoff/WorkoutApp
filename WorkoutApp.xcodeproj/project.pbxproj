@@ -9,13 +9,50 @@
 /* Begin PBXBuildFile section */
 		124DB1202AE8E064003F0370 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DB11F2AE8E064003F0370 /* AppDelegate.swift */; };
 		124DB1222AE8E064003F0370 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DB1212AE8E064003F0370 /* SceneDelegate.swift */; };
-		124DB1242AE8E064003F0370 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DB1232AE8E064003F0370 /* ViewController.swift */; };
-		124DB1272AE8E064003F0370 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124DB1252AE8E064003F0370 /* Main.storyboard */; };
+		124DB1242AE8E064003F0370 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DB1232AE8E064003F0370 /* MainViewController.swift */; };
 		124DB1292AE8E067003F0370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 124DB1282AE8E067003F0370 /* Assets.xcassets */; };
 		124DB12C2AE8E067003F0370 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124DB12A2AE8E067003F0370 /* LaunchScreen.storyboard */; };
 		124DB1372AE8E068003F0370 /* WorkoutAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DB1362AE8E068003F0370 /* WorkoutAppTests.swift */; };
 		124DB1412AE8E068003F0370 /* WorkoutAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DB1402AE8E068003F0370 /* WorkoutAppUITests.swift */; };
 		124DB1432AE8E068003F0370 /* WorkoutAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DB1422AE8E068003F0370 /* WorkoutAppUITestsLaunchTests.swift */; };
+		124DB1592AE8F459003F0370 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DB1582AE8F459003F0370 /* CalendarView.swift */; };
+		124DB15B2AE8F47E003F0370 /* CalendarCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DB15A2AE8F47E003F0370 /* CalendarCollectionView.swift */; };
+		124DB15D2AE8F49F003F0370 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DB15C2AE8F49F003F0370 /* WeatherView.swift */; };
+		124DB1602AE8F4DC003F0370 /* UIColor + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DB15F2AE8F4DC003F0370 /* UIColor + Extensions.swift */; };
+		124DB1622AE8F4F7003F0370 /* UIFont + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DB1612AE8F4F7003F0370 /* UIFont + Extensions.swift */; };
+		124DB1642AE8F517003F0370 /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DB1632AE8F517003F0370 /* UIView + Extensions.swift */; };
+		124DB16A2AE8F76C003F0370 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DB1692AE8F76C003F0370 /* CalendarCollectionViewCell.swift */; };
+		1268E2C52AF4B55F00ED3FC3 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1268E2C32AF4B55E00ED3FC3 /* Roboto-Bold.ttf */; };
+		1268E2C62AF4B55F00ED3FC3 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1268E2C32AF4B55E00ED3FC3 /* Roboto-Bold.ttf */; };
+		1268E2C72AF4B55F00ED3FC3 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1268E2C32AF4B55E00ED3FC3 /* Roboto-Bold.ttf */; };
+		1268E2C82AF4B55F00ED3FC3 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1268E2C42AF4B55F00ED3FC3 /* Roboto-Medium.ttf */; };
+		1268E2C92AF4B55F00ED3FC3 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1268E2C42AF4B55F00ED3FC3 /* Roboto-Medium.ttf */; };
+		1268E2CA2AF4B55F00ED3FC3 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1268E2C42AF4B55F00ED3FC3 /* Roboto-Medium.ttf */; };
+		127867252AFDDE9100437517 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 127867242AFDDE9100437517 /* Realm */; };
+		127867272AFDDE9100437517 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 127867262AFDDE9100437517 /* RealmSwift */; };
+		1278672A2AFDE21100437517 /* SliderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127867292AFDE21000437517 /* SliderType.swift */; };
+		1278672C2AFE053E00437517 /* Int + Extencion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1278672B2AFE053E00437517 /* Int + Extencion.swift */; };
+		1278672E2AFE0C1B00437517 /* WorkouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1278672D2AFE0C1B00437517 /* WorkouteModel.swift */; };
+		127867302AFF5BEE00437517 /* Date + Extansions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1278672F2AFF5BEE00437517 /* Date + Extansions.swift */; };
+		127867332AFF61C400437517 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127867322AFF61C400437517 /* RealmManager.swift */; };
+		12A7A7D92AF823A60028CE0F /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7D82AF823A60028CE0F /* MainTableView.swift */; };
+		12A7A7DB2AF82A1E0028CE0F /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7DA2AF82A1E0028CE0F /* WorkoutTableViewCell.swift */; };
+		12A7A7DD2AF8423D0028CE0F /* UIStackView + Extancsons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7DC2AF8423D0028CE0F /* UIStackView + Extancsons.swift */; };
+		12A7A7E32AF880DC0028CE0F /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7E22AF880DC0028CE0F /* StatisticViewController.swift */; };
+		12A7A7E52AF888490028CE0F /* StatisticTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7E42AF888490028CE0F /* StatisticTableView.swift */; };
+		12A7A7E72AF889330028CE0F /* StatisticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7E62AF889330028CE0F /* StatisticTableViewCell.swift */; };
+		12A7A7EA2AF8B6980028CE0F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7E92AF8B6980028CE0F /* MainTabBarController.swift */; };
+		12A7A7EF2AF8CA870028CE0F /* NewWorkoutViewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7EE2AF8CA870028CE0F /* NewWorkoutViewsController.swift */; };
+		12A7A7F22AFA00EC0028CE0F /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7F12AFA00EC0028CE0F /* CloseButton.swift */; };
+		12A7A7F42AFA0D160028CE0F /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7F32AFA0D160028CE0F /* NameView.swift */; };
+		12A7A7F62AFA0E480028CE0F /* BrownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7F52AFA0E480028CE0F /* BrownTextField.swift */; };
+		12A7A7F82AFB496C0028CE0F /* DataAndRepeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7F72AFB496C0028CE0F /* DataAndRepeatView.swift */; };
+		12A7A7FA2AFC7C460028CE0F /* GreenSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7F92AFC7C460028CE0F /* GreenSlider.swift */; };
+		12A7A7FD2AFC7DCC0028CE0F /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7FC2AFC7DCC0028CE0F /* SliderView.swift */; };
+		12A7A7FF2AFC8EA80028CE0F /* RepsOrTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7FE2AFC8EA80028CE0F /* RepsOrTimerView.swift */; };
+		12A7A8012AFCA4BC0028CE0F /* GreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A8002AFCA4BC0028CE0F /* GreenButton.swift */; };
+		12ACC9D32AF814A600D5DBB8 /* UILabel + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ACC9D22AF814A600D5DBB8 /* UILabel + Extensions.swift */; };
+		12DF06CF2B15C25C0015C4D6 /* UIViewController + Extencions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DF06CE2B15C25C0015C4D6 /* UIViewController + Extencions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +76,7 @@
 		124DB11C2AE8E064003F0370 /* WorkoutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		124DB11F2AE8E064003F0370 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		124DB1212AE8E064003F0370 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		124DB1232AE8E064003F0370 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		124DB1262AE8E064003F0370 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		124DB1232AE8E064003F0370 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		124DB1282AE8E067003F0370 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		124DB12B2AE8E067003F0370 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		124DB12D2AE8E067003F0370 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +85,38 @@
 		124DB13C2AE8E068003F0370 /* WorkoutAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		124DB1402AE8E068003F0370 /* WorkoutAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutAppUITests.swift; sourceTree = "<group>"; };
 		124DB1422AE8E068003F0370 /* WorkoutAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		124DB1582AE8F459003F0370 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		124DB15A2AE8F47E003F0370 /* CalendarCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionView.swift; sourceTree = "<group>"; };
+		124DB15C2AE8F49F003F0370 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		124DB15F2AE8F4DC003F0370 /* UIColor + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extensions.swift"; sourceTree = "<group>"; };
+		124DB1612AE8F4F7003F0370 /* UIFont + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extensions.swift"; sourceTree = "<group>"; };
+		124DB1632AE8F517003F0370 /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
+		124DB1692AE8F76C003F0370 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		1268E2C32AF4B55E00ED3FC3 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		1268E2C42AF4B55F00ED3FC3 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		127867292AFDE21000437517 /* SliderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderType.swift; sourceTree = "<group>"; };
+		1278672B2AFE053E00437517 /* Int + Extencion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Extencion.swift"; sourceTree = "<group>"; };
+		1278672D2AFE0C1B00437517 /* WorkouteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkouteModel.swift; sourceTree = "<group>"; };
+		1278672F2AFF5BEE00437517 /* Date + Extansions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extansions.swift"; sourceTree = "<group>"; };
+		127867322AFF61C400437517 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		12A7A7D82AF823A60028CE0F /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
+		12A7A7DA2AF82A1E0028CE0F /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		12A7A7DC2AF8423D0028CE0F /* UIStackView + Extancsons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extancsons.swift"; sourceTree = "<group>"; };
+		12A7A7E22AF880DC0028CE0F /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
+		12A7A7E42AF888490028CE0F /* StatisticTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTableView.swift; sourceTree = "<group>"; };
+		12A7A7E62AF889330028CE0F /* StatisticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTableViewCell.swift; sourceTree = "<group>"; };
+		12A7A7E92AF8B6980028CE0F /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		12A7A7EE2AF8CA870028CE0F /* NewWorkoutViewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutViewsController.swift; sourceTree = "<group>"; };
+		12A7A7F12AFA00EC0028CE0F /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		12A7A7F32AFA0D160028CE0F /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
+		12A7A7F52AFA0E480028CE0F /* BrownTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownTextField.swift; sourceTree = "<group>"; };
+		12A7A7F72AFB496C0028CE0F /* DataAndRepeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAndRepeatView.swift; sourceTree = "<group>"; };
+		12A7A7F92AFC7C460028CE0F /* GreenSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenSlider.swift; sourceTree = "<group>"; };
+		12A7A7FC2AFC7DCC0028CE0F /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		12A7A7FE2AFC8EA80028CE0F /* RepsOrTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsOrTimerView.swift; sourceTree = "<group>"; };
+		12A7A8002AFCA4BC0028CE0F /* GreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenButton.swift; sourceTree = "<group>"; };
+		12ACC9D22AF814A600D5DBB8 /* UILabel + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extensions.swift"; sourceTree = "<group>"; };
+		12DF06CE2B15C25C0015C4D6 /* UIViewController + Extencions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extencions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +124,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				127867272AFDDE9100437517 /* RealmSwift in Frameworks */,
+				127867252AFDDE9100437517 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,13 +169,14 @@
 		124DB11E2AE8E064003F0370 /* WorkoutApp */ = {
 			isa = PBXGroup;
 			children = (
-				124DB11F2AE8E064003F0370 /* AppDelegate.swift */,
-				124DB1212AE8E064003F0370 /* SceneDelegate.swift */,
-				124DB1232AE8E064003F0370 /* ViewController.swift */,
-				124DB1252AE8E064003F0370 /* Main.storyboard */,
-				124DB1282AE8E067003F0370 /* Assets.xcassets */,
-				124DB12A2AE8E067003F0370 /* LaunchScreen.storyboard */,
-				124DB12D2AE8E067003F0370 /* Info.plist */,
+				124DB1502AE8F341003F0370 /* Applicaton */,
+				12A7A7E82AF8B6640028CE0F /* NavigationModule */,
+				124DB1512AE8F358003F0370 /* MainModule */,
+				12A7A7EB2AF8C0030028CE0F /* NewWorkooutModule */,
+				12A7A7DE2AF8801B0028CE0F /* StatisticModule */,
+				127867312AFF619600437517 /* Service */,
+				124DB1522AE8F36F003F0370 /* Extansions */,
+				124DB14F2AE8F32A003F0370 /* SupportingFiles */,
 			);
 			path = WorkoutApp;
 			sourceTree = "<group>";
@@ -127,6 +198,212 @@
 			path = WorkoutAppUITests;
 			sourceTree = "<group>";
 		};
+		124DB14F2AE8F32A003F0370 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1268E2C22AF4B50B00ED3FC3 /* Fonts */,
+				124DB12D2AE8E067003F0370 /* Info.plist */,
+				124DB12A2AE8E067003F0370 /* LaunchScreen.storyboard */,
+				124DB1282AE8E067003F0370 /* Assets.xcassets */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		124DB1502AE8F341003F0370 /* Applicaton */ = {
+			isa = PBXGroup;
+			children = (
+				124DB1212AE8E064003F0370 /* SceneDelegate.swift */,
+				124DB11F2AE8E064003F0370 /* AppDelegate.swift */,
+			);
+			name = Applicaton;
+			sourceTree = "<group>";
+		};
+		124DB1512AE8F358003F0370 /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				124DB1542AE8F3D2003F0370 /* Models */,
+				124DB1552AE8F3DD003F0370 /* Views */,
+				124DB1562AE8F3E6003F0370 /* Controllers */,
+			);
+			name = MainModule;
+			sourceTree = "<group>";
+		};
+		124DB1522AE8F36F003F0370 /* Extansions */ = {
+			isa = PBXGroup;
+			children = (
+				12A7A7F02AFA00D40028CE0F /* Components */,
+				124DB15E2AE8F4BC003F0370 /* UIKit */,
+				1278672B2AFE053E00437517 /* Int + Extencion.swift */,
+				1278672F2AFF5BEE00437517 /* Date + Extansions.swift */,
+			);
+			name = Extansions;
+			sourceTree = "<group>";
+		};
+		124DB1542AE8F3D2003F0370 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1278672D2AFE0C1B00437517 /* WorkouteModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		124DB1552AE8F3DD003F0370 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				124DB1572AE8F40A003F0370 /* Cells */,
+				124DB1582AE8F459003F0370 /* CalendarView.swift */,
+				124DB15A2AE8F47E003F0370 /* CalendarCollectionView.swift */,
+				124DB15C2AE8F49F003F0370 /* WeatherView.swift */,
+				12A7A7D82AF823A60028CE0F /* MainTableView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		124DB1562AE8F3E6003F0370 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				124DB1232AE8E064003F0370 /* MainViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		124DB1572AE8F40A003F0370 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				124DB1692AE8F76C003F0370 /* CalendarCollectionViewCell.swift */,
+				12A7A7DA2AF82A1E0028CE0F /* WorkoutTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		124DB15E2AE8F4BC003F0370 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				124DB15F2AE8F4DC003F0370 /* UIColor + Extensions.swift */,
+				124DB1612AE8F4F7003F0370 /* UIFont + Extensions.swift */,
+				124DB1632AE8F517003F0370 /* UIView + Extensions.swift */,
+				12ACC9D22AF814A600D5DBB8 /* UILabel + Extensions.swift */,
+				12A7A7DC2AF8423D0028CE0F /* UIStackView + Extancsons.swift */,
+				12DF06CE2B15C25C0015C4D6 /* UIViewController + Extencions.swift */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		1268E2C22AF4B50B00ED3FC3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1268E2C32AF4B55E00ED3FC3 /* Roboto-Bold.ttf */,
+				1268E2C42AF4B55F00ED3FC3 /* Roboto-Medium.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		127867282AFDE1DB00437517 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				127867292AFDE21000437517 /* SliderType.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		127867312AFF619600437517 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				127867322AFF61C400437517 /* RealmManager.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		12A7A7DE2AF8801B0028CE0F /* StatisticModule */ = {
+			isa = PBXGroup;
+			children = (
+				12A7A7DF2AF880790028CE0F /* Views */,
+				12A7A7E02AF880890028CE0F /* Controllers */,
+			);
+			name = StatisticModule;
+			sourceTree = "<group>";
+		};
+		12A7A7DF2AF880790028CE0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				12A7A7E42AF888490028CE0F /* StatisticTableView.swift */,
+				12A7A7E12AF880A00028CE0F /* Cells */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		12A7A7E02AF880890028CE0F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				12A7A7E22AF880DC0028CE0F /* StatisticViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		12A7A7E12AF880A00028CE0F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				12A7A7E62AF889330028CE0F /* StatisticTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		12A7A7E82AF8B6640028CE0F /* NavigationModule */ = {
+			isa = PBXGroup;
+			children = (
+				12A7A7E92AF8B6980028CE0F /* MainTabBarController.swift */,
+			);
+			name = NavigationModule;
+			sourceTree = "<group>";
+		};
+		12A7A7EB2AF8C0030028CE0F /* NewWorkooutModule */ = {
+			isa = PBXGroup;
+			children = (
+				127867282AFDE1DB00437517 /* Model */,
+				12A7A7EC2AF8C01A0028CE0F /* Views */,
+				12A7A7ED2AF8C0280028CE0F /* Controllers */,
+			);
+			name = NewWorkooutModule;
+			sourceTree = "<group>";
+		};
+		12A7A7EC2AF8C01A0028CE0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				12A7A7FB2AFC7D870028CE0F /* SubViews */,
+				12A7A7F32AFA0D160028CE0F /* NameView.swift */,
+				12A7A7F72AFB496C0028CE0F /* DataAndRepeatView.swift */,
+				12A7A7FE2AFC8EA80028CE0F /* RepsOrTimerView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		12A7A7ED2AF8C0280028CE0F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				12A7A7EE2AF8CA870028CE0F /* NewWorkoutViewsController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		12A7A7F02AFA00D40028CE0F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				12A7A7F12AFA00EC0028CE0F /* CloseButton.swift */,
+				12A7A7F52AFA0E480028CE0F /* BrownTextField.swift */,
+				12A7A7F92AFC7C460028CE0F /* GreenSlider.swift */,
+				12A7A8002AFCA4BC0028CE0F /* GreenButton.swift */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		12A7A7FB2AFC7D870028CE0F /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				12A7A7FC2AFC7DCC0028CE0F /* SliderView.swift */,
+			);
+			name = SubViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +420,10 @@
 			dependencies = (
 			);
 			name = WorkoutApp;
+			packageProductDependencies = (
+				127867242AFDDE9100437517 /* Realm */,
+				127867262AFDDE9100437517 /* RealmSwift */,
+			);
 			productName = WorkoutApp;
 			productReference = 124DB11C2AE8E064003F0370 /* WorkoutApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +496,9 @@
 				Base,
 			);
 			mainGroup = 124DB1132AE8E064003F0370;
+			packageReferences = (
+				127867232AFDDE9100437517 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 124DB11D2AE8E064003F0370 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,9 +515,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1268E2C82AF4B55F00ED3FC3 /* Roboto-Medium.ttf in Resources */,
 				124DB12C2AE8E067003F0370 /* LaunchScreen.storyboard in Resources */,
 				124DB1292AE8E067003F0370 /* Assets.xcassets in Resources */,
-				124DB1272AE8E064003F0370 /* Main.storyboard in Resources */,
+				1268E2C52AF4B55F00ED3FC3 /* Roboto-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +526,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1268E2C92AF4B55F00ED3FC3 /* Roboto-Medium.ttf in Resources */,
+				1268E2C62AF4B55F00ED3FC3 /* Roboto-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +535,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1268E2CA2AF4B55F00ED3FC3 /* Roboto-Medium.ttf in Resources */,
+				1268E2C72AF4B55F00ED3FC3 /* Roboto-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +547,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				124DB1242AE8E064003F0370 /* ViewController.swift in Sources */,
+				124DB15B2AE8F47E003F0370 /* CalendarCollectionView.swift in Sources */,
+				12A7A7FF2AFC8EA80028CE0F /* RepsOrTimerView.swift in Sources */,
+				12ACC9D32AF814A600D5DBB8 /* UILabel + Extensions.swift in Sources */,
+				12A7A7F42AFA0D160028CE0F /* NameView.swift in Sources */,
+				12A7A7EF2AF8CA870028CE0F /* NewWorkoutViewsController.swift in Sources */,
+				12A7A7FD2AFC7DCC0028CE0F /* SliderView.swift in Sources */,
+				12A7A7EA2AF8B6980028CE0F /* MainTabBarController.swift in Sources */,
+				124DB1242AE8E064003F0370 /* MainViewController.swift in Sources */,
+				1278672A2AFDE21100437517 /* SliderType.swift in Sources */,
+				12A7A7E32AF880DC0028CE0F /* StatisticViewController.swift in Sources */,
 				124DB1202AE8E064003F0370 /* AppDelegate.swift in Sources */,
+				1278672E2AFE0C1B00437517 /* WorkouteModel.swift in Sources */,
+				12A7A7FA2AFC7C460028CE0F /* GreenSlider.swift in Sources */,
+				124DB1602AE8F4DC003F0370 /* UIColor + Extensions.swift in Sources */,
+				12A7A7F62AFA0E480028CE0F /* BrownTextField.swift in Sources */,
+				127867302AFF5BEE00437517 /* Date + Extansions.swift in Sources */,
+				124DB16A2AE8F76C003F0370 /* CalendarCollectionViewCell.swift in Sources */,
+				12A7A7D92AF823A60028CE0F /* MainTableView.swift in Sources */,
+				12A7A7F22AFA00EC0028CE0F /* CloseButton.swift in Sources */,
+				124DB1622AE8F4F7003F0370 /* UIFont + Extensions.swift in Sources */,
+				12A7A7DB2AF82A1E0028CE0F /* WorkoutTableViewCell.swift in Sources */,
+				12A7A7DD2AF8423D0028CE0F /* UIStackView + Extancsons.swift in Sources */,
+				12DF06CF2B15C25C0015C4D6 /* UIViewController + Extencions.swift in Sources */,
+				124DB15D2AE8F49F003F0370 /* WeatherView.swift in Sources */,
+				124DB1592AE8F459003F0370 /* CalendarView.swift in Sources */,
+				1278672C2AFE053E00437517 /* Int + Extencion.swift in Sources */,
+				127867332AFF61C400437517 /* RealmManager.swift in Sources */,
+				124DB1642AE8F517003F0370 /* UIView + Extensions.swift in Sources */,
+				12A7A7F82AFB496C0028CE0F /* DataAndRepeatView.swift in Sources */,
+				12A7A7E72AF889330028CE0F /* StatisticTableViewCell.swift in Sources */,
+				12A7A7E52AF888490028CE0F /* StatisticTableView.swift in Sources */,
+				12A7A8012AFCA4BC0028CE0F /* GreenButton.swift in Sources */,
 				124DB1222AE8E064003F0370 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,14 +616,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		124DB1252AE8E064003F0370 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				124DB1262AE8E064003F0370 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		124DB12A2AE8E067003F0370 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,11 +753,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7J6C95TMNY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WorkoutApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -469,11 +781,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7J6C95TMNY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WorkoutApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -601,6 +914,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		127867232AFDDE9100437517 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		127867242AFDDE9100437517 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 127867232AFDDE9100437517 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		127867262AFDDE9100437517 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 127867232AFDDE9100437517 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 124DB1142AE8E064003F0370 /* Project object */;
 }
