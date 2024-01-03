@@ -24,4 +24,10 @@ class RealmManager {
             realm.add(model)
         }
     }
+    
+    func deleteWorkouteModel(_ model: WorkouteModel) {
+        try! realm.write {
+            realm.delete(model)
+        }
+    }
 }

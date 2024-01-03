@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol MainTableViewProtocol: AnyObject {
+    func deleteWorkout(model: WorkouteModel, index: Int)
+}
+
 class MainTableView: UITableView {
+    
+    weak var mainDelegate: MainTableViewProtocol?
     
     private var workoutArray = [WorkouteModel]()
     
@@ -55,6 +61,7 @@ extension MainTableView: UITableViewDataSource {
         }
         let workoutModel = workoutArray[indexPath.row]
         cell.configure(model: workoutModel)
+        cell.workoutCellDelegate = mainDelegate as? WorkoutCellProtocol
         return cell
     }
 }
@@ -68,8 +75,10 @@ extension MainTableView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let action = UIContextualAction(style: .destructive, title: "") { _, _, _ in
-            print("delaete cell")
+        let action = UIContextualAction(style: .destructive, title: "") { [weak self] _, _, _ in
+            guard let self else { return }
+            let deleteModel = self.workoutArray[indexPath.row]
+            mainDelegate?.deleteWorkout(model: deleteModel, index: indexPath.row)
         }
         
         action.backgroundColor = .specialBackground

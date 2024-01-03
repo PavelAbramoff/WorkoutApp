@@ -7,7 +7,14 @@
 
 import UIKit
 
+protocol WorkoutCellProtocol: AnyObject {
+    
+    func startButtonTapped(model: WorkouteModel)
+}
+
 class WorkoutTableViewCell: UITableViewCell {
+    
+    weak var workoutCellDelegate: WorkoutCellProtocol?
     
     static let idTableViewCell = "idTableViewCell"
     
@@ -106,7 +113,7 @@ class WorkoutTableViewCell: UITableViewCell {
     }
     
     @objc private func startButtonTapped() {
-        print("START")
+        workoutCellDelegate?.startButtonTapped(model: workoutModel)
     }
     
     func configure(model: WorkouteModel) {

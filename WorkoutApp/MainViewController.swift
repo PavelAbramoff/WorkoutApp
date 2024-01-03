@@ -76,7 +76,6 @@ class MainViewController: UIViewController {
         setConstraints()
         selectItem(date: Date())
         print("didLoad")
-        
     }
     
     private func setupViews() {
@@ -89,6 +88,7 @@ class MainViewController: UIViewController {
         view.addSubview(addWorkoutButton)
         view.addSubview(weatherView)
         view.addSubview(workoutTodayLabel)
+        tableView.mainDelegate = self
         view.addSubview(tableView)
         view.addSubview(noWorkoutImageView)
     }
@@ -117,17 +117,41 @@ class MainViewController: UIViewController {
         noWorkoutImageView.isHidden = !workoutArray.isEmpty
         tableView.isHidden = workoutArray.isEmpty
     }
+    
+    private func deleteAndReloadDateInWorkoutArray() {
+        tableView.setWorkoutArray(workoutArray)
+        tableView.reloadData()
+        checkWorkoutToday()
+    }
 }
 
 //MARK: CalendarViewProtocol
 
 extension MainViewController: CalendarViewProtocol {
+    
     func selectItem(date: Date) {
         getWorkouts(date: date)
-        tableView.setWorkoutArray(workoutArray)
-        tableView.reloadData()
-        checkWorkoutToday()
+        deleteAndReloadDateInWorkoutArray()
     }
+}
+
+//MARK: - MainTableViewProtocol
+
+extension MainViewController: MainTableViewProtocol {
+    
+    func deleteWorkout(model: WorkouteModel, index: Int) {
+        RealmManager.shared.deleteWorkouteModel(model)
+        workoutArray.remove(at: index)
+        deleteAndReloadDateInWorkoutArray()
+    }
+}
+
+extension MainViewController: WorkoutCellProtocol {
+    func startButtonTapped(model: WorkouteModel) {
+        print(model)
+    }
+    
+    
 }
 
 //MARK: - Set Constraints
