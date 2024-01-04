@@ -21,7 +21,7 @@ class NewWorkoutViewsController: UIViewController {
     private let repsOrTimerView = RepsOrTimerView()
     private let saveButton = GreenButton(text: "SAVE")
     
-    private var workoutModel = WorkouteModel()
+    private var workoutModel = WorkoutModel()
     private var testImage = UIImage(named: "testWorkout")
     
     private lazy var stackView = UIStackView(arrangedSubviews: [nameView,
@@ -87,7 +87,7 @@ class NewWorkoutViewsController: UIViewController {
             workoutModel.workoutSets != 0 &&
             (workoutModel.workoutReps != 0 || workoutModel.workoutTimer != 0) {
             RealmManager.shared.saveWorkoutModel(workoutModel)
-            workoutModel = WorkouteModel()
+            workoutModel = WorkoutModel()
             presentSimpleAlert(title: "Success")
             resetValues()
         } else {

@@ -8,14 +8,14 @@
 import UIKit
 
 protocol MainTableViewProtocol: AnyObject {
-    func deleteWorkout(model: WorkouteModel, index: Int)
+    func deleteWorkout(model: WorkoutModel, index: Int)
 }
 
 class MainTableView: UITableView {
     
     weak var mainDelegate: MainTableViewProtocol?
     
-    private var workoutArray = [WorkouteModel]()
+    private var workoutArray = [WorkoutModel]()
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
@@ -42,7 +42,7 @@ class MainTableView: UITableView {
         delegate = self
     }
     
-    func setWorkoutArray(_ array: [WorkouteModel]) {
+    func setWorkoutArray(_ array: [WorkoutModel]) {
         workoutArray = array
     }
 }
