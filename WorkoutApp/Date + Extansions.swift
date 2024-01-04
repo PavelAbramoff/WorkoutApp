@@ -43,6 +43,10 @@ extension Date {
         Calendar.current.date(byAdding: .day, value: -days, to: self) ?? Date()
     }
     
+    func offSetMonth(month: Int) -> Date {
+        Calendar.current.date(byAdding: .month, value: -month, to: self) ?? Date()
+    }
+    
     func startEndDate() -> (stsrt: Date, end: Date) {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd"

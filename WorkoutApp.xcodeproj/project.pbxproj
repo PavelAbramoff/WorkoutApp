@@ -32,7 +32,7 @@
 		127867272AFDDE9100437517 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 127867262AFDDE9100437517 /* RealmSwift */; };
 		1278672A2AFDE21100437517 /* SliderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127867292AFDE21000437517 /* SliderType.swift */; };
 		1278672C2AFE053E00437517 /* Int + Extencion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1278672B2AFE053E00437517 /* Int + Extencion.swift */; };
-		1278672E2AFE0C1B00437517 /* WorkouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1278672D2AFE0C1B00437517 /* WorkouteModel.swift */; };
+		1278672E2AFE0C1B00437517 /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1278672D2AFE0C1B00437517 /* WorkoutModel.swift */; };
 		127867302AFF5BEE00437517 /* Date + Extansions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1278672F2AFF5BEE00437517 /* Date + Extansions.swift */; };
 		127867332AFF61C400437517 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127867322AFF61C400437517 /* RealmManager.swift */; };
 		12A7A7D92AF823A60028CE0F /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7D82AF823A60028CE0F /* MainTableView.swift */; };
@@ -52,6 +52,7 @@
 		12A7A7FF2AFC8EA80028CE0F /* RepsOrTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7FE2AFC8EA80028CE0F /* RepsOrTimerView.swift */; };
 		12A7A8012AFCA4BC0028CE0F /* GreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A8002AFCA4BC0028CE0F /* GreenButton.swift */; };
 		12ACC9D32AF814A600D5DBB8 /* UILabel + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ACC9D22AF814A600D5DBB8 /* UILabel + Extensions.swift */; };
+		12B54F8D2B45432F00393D84 /* DifferenceWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B54F8C2B45432F00393D84 /* DifferenceWorkout.swift */; };
 		12DF06CF2B15C25C0015C4D6 /* UIViewController + Extencions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DF06CE2B15C25C0015C4D6 /* UIViewController + Extencions.swift */; };
 /* End PBXBuildFile section */
 
@@ -96,7 +97,7 @@
 		1268E2C42AF4B55F00ED3FC3 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		127867292AFDE21000437517 /* SliderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderType.swift; sourceTree = "<group>"; };
 		1278672B2AFE053E00437517 /* Int + Extencion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Extencion.swift"; sourceTree = "<group>"; };
-		1278672D2AFE0C1B00437517 /* WorkouteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkouteModel.swift; sourceTree = "<group>"; };
+		1278672D2AFE0C1B00437517 /* WorkoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
 		1278672F2AFF5BEE00437517 /* Date + Extansions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extansions.swift"; sourceTree = "<group>"; };
 		127867322AFF61C400437517 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		12A7A7D82AF823A60028CE0F /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
@@ -116,6 +117,7 @@
 		12A7A7FE2AFC8EA80028CE0F /* RepsOrTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsOrTimerView.swift; sourceTree = "<group>"; };
 		12A7A8002AFCA4BC0028CE0F /* GreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenButton.swift; sourceTree = "<group>"; };
 		12ACC9D22AF814A600D5DBB8 /* UILabel + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extensions.swift"; sourceTree = "<group>"; };
+		12B54F8C2B45432F00393D84 /* DifferenceWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferenceWorkout.swift; sourceTree = "<group>"; };
 		12DF06CE2B15C25C0015C4D6 /* UIViewController + Extencions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extencions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -242,7 +244,7 @@
 		124DB1542AE8F3D2003F0370 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1278672D2AFE0C1B00437517 /* WorkouteModel.swift */,
+				1278672D2AFE0C1B00437517 /* WorkoutModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -317,6 +319,7 @@
 		12A7A7DE2AF8801B0028CE0F /* StatisticModule */ = {
 			isa = PBXGroup;
 			children = (
+				12B54F8B2B45430800393D84 /* Models */,
 				12A7A7DF2AF880790028CE0F /* Views */,
 				12A7A7E02AF880890028CE0F /* Controllers */,
 			);
@@ -402,6 +405,14 @@
 				12A7A7FC2AFC7DCC0028CE0F /* SliderView.swift */,
 			);
 			name = SubViews;
+			sourceTree = "<group>";
+		};
+		12B54F8B2B45430800393D84 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12B54F8C2B45432F00393D84 /* DifferenceWorkout.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -558,7 +569,7 @@
 				1278672A2AFDE21100437517 /* SliderType.swift in Sources */,
 				12A7A7E32AF880DC0028CE0F /* StatisticViewController.swift in Sources */,
 				124DB1202AE8E064003F0370 /* AppDelegate.swift in Sources */,
-				1278672E2AFE0C1B00437517 /* WorkouteModel.swift in Sources */,
+				1278672E2AFE0C1B00437517 /* WorkoutModel.swift in Sources */,
 				12A7A7FA2AFC7C460028CE0F /* GreenSlider.swift in Sources */,
 				124DB1602AE8F4DC003F0370 /* UIColor + Extensions.swift in Sources */,
 				12A7A7F62AFA0E480028CE0F /* BrownTextField.swift in Sources */,
@@ -567,6 +578,7 @@
 				12A7A7D92AF823A60028CE0F /* MainTableView.swift in Sources */,
 				12A7A7F22AFA00EC0028CE0F /* CloseButton.swift in Sources */,
 				124DB1622AE8F4F7003F0370 /* UIFont + Extensions.swift in Sources */,
+				12B54F8D2B45432F00393D84 /* DifferenceWorkout.swift in Sources */,
 				12A7A7DB2AF82A1E0028CE0F /* WorkoutTableViewCell.swift in Sources */,
 				12A7A7DD2AF8423D0028CE0F /* UIStackView + Extancsons.swift in Sources */,
 				12DF06CF2B15C25C0015C4D6 /* UIViewController + Extencions.swift in Sources */,

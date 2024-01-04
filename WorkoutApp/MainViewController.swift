@@ -58,7 +58,7 @@ class MainViewController: UIViewController {
     private let workoutTodayLabel = UILabel(text: "Workout today")
     private let tableView = MainTableView()
     
-    private var workoutArray = [WorkouteModel]()
+    private var workoutArray = [WorkoutModel]()
     
     override func viewDidLayoutSubviews() {
         userPhotoImageView.layer.cornerRadius = userPhotoImageView.frame.width / 2
@@ -139,7 +139,7 @@ extension MainViewController: CalendarViewProtocol {
 
 extension MainViewController: MainTableViewProtocol {
     
-    func deleteWorkout(model: WorkouteModel, index: Int) {
+    func deleteWorkout(model: WorkoutModel, index: Int) {
         RealmManager.shared.deleteWorkouteModel(model)
         workoutArray.remove(at: index)
         deleteAndReloadDateInWorkoutArray()
@@ -147,7 +147,7 @@ extension MainViewController: MainTableViewProtocol {
 }
 
 extension MainViewController: WorkoutCellProtocol {
-    func startButtonTapped(model: WorkouteModel) {
+    func startButtonTapped(model: WorkoutModel) {
         print(model)
     }
     

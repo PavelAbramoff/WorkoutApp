@@ -9,7 +9,7 @@ import UIKit
 
 protocol WorkoutCellProtocol: AnyObject {
     
-    func startButtonTapped(model: WorkouteModel)
+    func startButtonTapped(model: WorkoutModel)
 }
 
 class WorkoutTableViewCell: UITableViewCell {
@@ -85,7 +85,7 @@ class WorkoutTableViewCell: UITableViewCell {
     
     private var labelStackView = UIStackView()
     
-    private var workoutModel = WorkouteModel()
+    private var workoutModel = WorkoutModel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -116,7 +116,7 @@ class WorkoutTableViewCell: UITableViewCell {
         workoutCellDelegate?.startButtonTapped(model: workoutModel)
     }
     
-    func configure(model: WorkouteModel) {
+    func configure(model: WorkoutModel) {
         workoutModel = model
         
         workoutNameLabel.text = model.workoutName
