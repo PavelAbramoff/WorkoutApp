@@ -125,7 +125,7 @@ class WorkoutTableViewCell: UITableViewCell {
             .workoutTimer == 0 {
             workoutRapsLabel.text = "Reps: \(model.workoutReps)"
         } else {
-            workoutRapsLabel.text = "Time: \(model.workoutTimer.getTimeFromSecond())"
+            workoutRapsLabel.text = "Time: \(model.workoutTimer.getTimeFromSeconds())"
             workoutSetsLabel.text = "Sets: \(model.workoutSets)"
         }
         if model.workoutStatus {

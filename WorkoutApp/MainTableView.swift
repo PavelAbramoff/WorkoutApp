@@ -42,7 +42,7 @@ class MainTableView: UITableView {
         delegate = self
     }
     
-    func setWorkoutArray(_ array: [WorkoutModel]) {
+    func setWorkoutsArray(_ array: [WorkoutModel]) {
         workoutArray = array
     }
 }

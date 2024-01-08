@@ -119,7 +119,7 @@ class MainViewController: UIViewController {
     }
     
     private func deleteAndReloadDateInWorkoutArray() {
-        tableView.setWorkoutArray(workoutArray)
+        tableView.setWorkoutsArray(workoutArray)
         tableView.reloadData()
         checkWorkoutToday()
     }
@@ -138,20 +138,29 @@ extension MainViewController: CalendarViewProtocol {
 //MARK: - MainTableViewProtocol
 
 extension MainViewController: MainTableViewProtocol {
-    
     func deleteWorkout(model: WorkoutModel, index: Int) {
-        RealmManager.shared.deleteWorkouteModel(model)
+        RealmManager.shared.deleteWorkoutModel(model)
         workoutArray.remove(at: index)
-        deleteAndReloadDateInWorkoutArray()
+        tableView.setWorkoutsArray(workoutArray)
+        tableView.reloadData()
+        checkWorkoutToday()
     }
 }
 
 extension MainViewController: WorkoutCellProtocol {
     func startButtonTapped(model: WorkoutModel) {
-        print(model)
+        if model.workoutTimer == 0 {
+            let repsWorkoutViewController = RepsWorkoutViewController()
+            repsWorkoutViewController.modalPresentationStyle = .fullScreen
+            repsWorkoutViewController.setWorkoutModel(model)
+            present(repsWorkoutViewController, animated: true)
+        } else {
+            let timerWorkoutViewController = TimerWorkoutViewController()
+            timerWorkoutViewController.modalPresentationStyle = .fullScreen
+            timerWorkoutViewController.setWorkoutModel(model)
+            present(timerWorkoutViewController, animated: true)
+        }
     }
-    
-    
 }
 
 //MARK: - Set Constraints
