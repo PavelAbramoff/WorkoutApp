@@ -113,15 +113,10 @@ class TimerWorkoutParametersView: UIView {
         print("next")
     }
     
-    public func refreshLabels(model: WorkoutModel, numberOfSet: Int) {
+    func refreshLabels(model: WorkoutModel, numberOfSet: Int) {
         workoutNameLabel.text = model.workoutName
         numberOfSetsLabel.text = "\(numberOfSet)/\(model.workoutSets)"
         numberOfTimerLabel.text = "\(model.workoutTimer.getTimeFromSeconds())"
-    }
-    
-    public func buttonsIsEnable(_ value: Bool) {
-        editingButton.isEnabled = value
-        nextSetsButton.isEnabled = value
     }
 
     private func setConstraints() {

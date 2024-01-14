@@ -38,9 +38,16 @@ class TimerWorkoutViewController: UIViewController {
     private let timerWorkoutParametersView = TimerWorkoutParametersView()
     
     private var workoutModel = WorkoutModel()
+    private var customAlert = CustomAlert()
+    private var shapeLayer = CAShapeLayer()
+    private var timer = Timer()
+    
+    private var durationTimer = 10
+    private var numberOfSet = 0
  
     override func viewDidLayoutSubviews() {
         closeButton.layer.cornerRadius = closeButton.frame.height / 2
+        animationCircular()
     }
     
     override func viewDidLoad() {
@@ -48,6 +55,8 @@ class TimerWorkoutViewController: UIViewController {
         
         setupViews()
         setConstraints()
+        addGesture()
+        setWorkoutParameters()
     }
     
     private func setupViews() {
@@ -59,6 +68,7 @@ class TimerWorkoutViewController: UIViewController {
         view.addSubview(ellipseImageView)
         view.addSubview(timerLabel)
         view.addSubview(detailsLabel)
+        timerWorkoutParametersView.refreshLabels(model: workoutModel, numberOfSet: numberOfSet )
         view.addSubview(timerWorkoutParametersView)
         view.addSubview(finishButton)
         finishButton.addTarget(self, action: #selector(finishButtonTapped), for: .touchUpInside)
@@ -74,6 +84,56 @@ class TimerWorkoutViewController: UIViewController {
     
     func setWorkoutModel(_ model: WorkoutModel) {
         workoutModel = model
+    }
+    
+    private func addGesture() {
+        let tapLabel = UITapGestureRecognizer(target: self, action: #selector(startTimer))
+        timerLabel.isUserInteractionEnabled = true
+        timerLabel.addGestureRecognizer(tapLabel)
+    }
+    
+    @objc private func startTimer() {
+       bacicAnimation()
+    }
+    
+    private func setWorkoutParameters() {
+        let (min, sec) = workoutModel.workoutTimer.convertSecond()
+        timerLabel.text = "\(min):\(sec.setZeroForSeconnd())"
+        durationTimer = workoutModel.workoutTimer
+    }
+}
+
+// MARK: - Animation
+
+extension TimerWorkoutViewController {
+    
+    private func animationCircular() {
+        
+        let center = CGPoint(x: ellipseImageView.frame.width / 2,
+                             y: ellipseImageView.frame.width / 2)
+        
+        let endAngle = 3 * CGFloat.pi / 2
+        let startAngle = CGFloat.pi * 2 + endAngle
+         
+        let circularPath = UIBezierPath(arcCenter: center,
+                                        radius: 127,
+                                        startAngle: startAngle,
+                                        endAngle: endAngle,
+                                        clockwise: false)
+        
+        shapeLayer.path = circularPath.cgPath
+        shapeLayer.lineWidth = 21
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.strokeColor = UIColor.specialGreen.cgColor
+        shapeLayer.lineCap = .round
+        ellipseImageView.layer.addSublayer(shapeLayer)
+    }
+    
+    private func bacicAnimation() {
+        let bacicAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        bacicAnimation.toValue = 0
+        bacicAnimation.duration = CFTimeInterval(durationTimer)
+        shapeLayer.add(bacicAnimation, forKey: "bacicAnimation")
     }
 }
 
