@@ -7,7 +7,14 @@
 
 import UIKit
 
+protocol NextSetTimerProtocol: AnyObject {
+    func nextSetTimerTapped()
+    func editingTimerTapped()
+}
+
 class TimerWorkoutParametersView: UIView {
+    
+    weak var cellNextTimerDelegate: NextSetTimerProtocol?
 
     private let workoutNameLabel = UILabel(text: "Name",
                                           font: .robotoMedium24(),
@@ -106,17 +113,22 @@ class TimerWorkoutParametersView: UIView {
     }
     
     @objc private func editingButtonTapped() {
-        print("edit")
+        cellNextTimerDelegate?.editingTimerTapped()
     }
     
     @objc private func nextSetsButtonTapped() {
-        print("next")
+        cellNextTimerDelegate?.nextSetTimerTapped()
     }
     
     func refreshLabels(model: WorkoutModel, numberOfSet: Int) {
         workoutNameLabel.text = model.workoutName
         numberOfSetsLabel.text = "\(numberOfSet)/\(model.workoutSets)"
         numberOfTimerLabel.text = "\(model.workoutTimer.getTimeFromSeconds())"
+    }
+    
+    func buttonIsEnable(_ value: Bool) {
+        editingButton.isEnabled = value
+        nextSetsButton.isEnabled = value
     }
 
     private func setConstraints() {
