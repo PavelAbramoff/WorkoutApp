@@ -40,6 +40,10 @@
 		1278672E2AFE0C1B00437517 /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1278672D2AFE0C1B00437517 /* WorkoutModel.swift */; };
 		127867302AFF5BEE00437517 /* Date + Extansions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1278672F2AFF5BEE00437517 /* Date + Extansions.swift */; };
 		127867332AFF61C400437517 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127867322AFF61C400437517 /* RealmManager.swift */; };
+		128E33212B578EF500098529 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E33202B578EF500098529 /* ProfileCollectionViewCell.swift */; };
+		128E33232B578F4700098529 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E33222B578F4700098529 /* ProfileViewController.swift */; };
+		128E33262B57901A00098529 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E33252B57901A00098529 /* SettingsViewController.swift */; };
+		128E33282B5790E200098529 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E33272B5790E200098529 /* UserModel.swift */; };
 		12A7A7D92AF823A60028CE0F /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7D82AF823A60028CE0F /* MainTableView.swift */; };
 		12A7A7DB2AF82A1E0028CE0F /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7DA2AF82A1E0028CE0F /* WorkoutTableViewCell.swift */; };
 		12A7A7DD2AF8423D0028CE0F /* UIStackView + Extancsons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7DC2AF8423D0028CE0F /* UIStackView + Extancsons.swift */; };
@@ -110,6 +114,10 @@
 		1278672D2AFE0C1B00437517 /* WorkoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
 		1278672F2AFF5BEE00437517 /* Date + Extansions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extansions.swift"; sourceTree = "<group>"; };
 		127867322AFF61C400437517 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		128E33202B578EF500098529 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		128E33222B578F4700098529 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		128E33252B57901A00098529 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		128E33272B5790E200098529 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		12A7A7D82AF823A60028CE0F /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
 		12A7A7DA2AF82A1E0028CE0F /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		12A7A7DC2AF8423D0028CE0F /* UIStackView + Extancsons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extancsons.swift"; sourceTree = "<group>"; };
@@ -238,6 +246,8 @@
 				120F50742B4B9E8E00EECD40 /* RepsWorkoutModule */,
 				120F507B2B4BDAAC00EECD40 /* TimerWorkoutModule */,
 				12A7A7DE2AF8801B0028CE0F /* StatisticModule */,
+				128E331D2B578E6300098529 /* ProfileModule */,
+				128E33242B578FF700098529 /* SettingsModule */,
 				127867312AFF619600437517 /* Service */,
 				124DB1522AE8F36F003F0370 /* Extansions */,
 				124DB14F2AE8F32A003F0370 /* SupportingFiles */,
@@ -307,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				1278672D2AFE0C1B00437517 /* WorkoutModel.swift */,
+				128E33272B5790E200098529 /* UserModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -376,6 +387,39 @@
 				127867322AFF61C400437517 /* RealmManager.swift */,
 			);
 			name = Service;
+			sourceTree = "<group>";
+		};
+		128E331D2B578E6300098529 /* ProfileModule */ = {
+			isa = PBXGroup;
+			children = (
+				128E331E2B578E8600098529 /* Views */,
+				128E331F2B578E8E00098529 /* Controllers */,
+			);
+			name = ProfileModule;
+			sourceTree = "<group>";
+		};
+		128E331E2B578E8600098529 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				128E33202B578EF500098529 /* ProfileCollectionViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		128E331F2B578E8E00098529 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				128E33222B578F4700098529 /* ProfileViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		128E33242B578FF700098529 /* SettingsModule */ = {
+			isa = PBXGroup;
+			children = (
+				128E33252B57901A00098529 /* SettingsViewController.swift */,
+			);
+			name = SettingsModule;
 			sourceTree = "<group>";
 		};
 		12A7A7DE2AF8801B0028CE0F /* StatisticModule */ = {
@@ -644,6 +688,7 @@
 				124DB16A2AE8F76C003F0370 /* CalendarCollectionViewCell.swift in Sources */,
 				12A7A7D92AF823A60028CE0F /* MainTableView.swift in Sources */,
 				12A7A7F22AFA00EC0028CE0F /* CloseButton.swift in Sources */,
+				128E33262B57901A00098529 /* SettingsViewController.swift in Sources */,
 				124DB1622AE8F4F7003F0370 /* UIFont + Extensions.swift in Sources */,
 				12B54F8D2B45432F00393D84 /* DifferenceWorkout.swift in Sources */,
 				12A7A7DB2AF82A1E0028CE0F /* WorkoutTableViewCell.swift in Sources */,
@@ -655,7 +700,10 @@
 				127867332AFF61C400437517 /* RealmManager.swift in Sources */,
 				124DB1642AE8F517003F0370 /* UIView + Extensions.swift in Sources */,
 				12A7A7F82AFB496C0028CE0F /* DataAndRepeatView.swift in Sources */,
+				128E33212B578EF500098529 /* ProfileCollectionViewCell.swift in Sources */,
+				128E33282B5790E200098529 /* UserModel.swift in Sources */,
 				12A7A7E72AF889330028CE0F /* StatisticTableViewCell.swift in Sources */,
+				128E33232B578F4700098529 /* ProfileViewController.swift in Sources */,
 				12A7A7E52AF888490028CE0F /* StatisticTableView.swift in Sources */,
 				120F50832B4BDC5D00EECD40 /* CustomAlert.swift in Sources */,
 				12A7A8012AFCA4BC0028CE0F /* GreenButton.swift in Sources */,
