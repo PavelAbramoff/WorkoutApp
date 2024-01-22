@@ -14,6 +14,7 @@ class MainViewController: UIViewController {
         imageView.backgroundColor = #colorLiteral(red: 0.7607843137, green: 0.7607843137, blue: 0.7607843137, alpha: 1)
         imageView.layer.borderColor = UIColor.white.cgColor
         imageView.layer.borderWidth = 5
+        imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -66,7 +67,8 @@ class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("!!!!")
+        selectItem(date: Date())
+        setupUserParameters()
     }
   
     override func viewDidLoad() {
@@ -74,8 +76,7 @@ class MainViewController: UIViewController {
         
         setupViews()
         setConstraints()
-        selectItem(date: Date())
-        print("didLoad")
+        getWeather()
     }
     
     private func setupViews() {
@@ -94,23 +95,23 @@ class MainViewController: UIViewController {
     }
     
     @objc private func addWorkoutButtonTapped() {
-        let newWorkooutViewController = NewWorkoutViewsController()
-        newWorkooutViewController.modalPresentationStyle = .fullScreen
-        present(newWorkooutViewController, animated: true)
+        let newWorkoutViewController = NewWorkoutViewsController()
+        newWorkoutViewController.modalPresentationStyle = .fullScreen
+        present(newWorkoutViewController, animated: true)
     }
     
     private func getWorkouts(date: Date) {
-        let weekday = date.getWeekdayNumber()
-        let starteDate = date.startEndDate().stsrt
-        let endDate = date.startEndDate().end
+        let weekday = date.getWeekdayNumber() //2
+        let startDate = date.startEndDate().start //25.09.2023 00:00
+        let endDate = date.startEndDate().end //26.09.2023 00:00
         
         let predicateRepeat = NSPredicate(format: "workoutNumberOfDay = \(weekday) AND workoutRepeat = true")
-        let predicateUnrepeat = NSPredicate(format: "workoutRepeat = false AND workoutDate BETWEEN %@", [starteDate, endDate])
+        let predicateUnrepeat = NSPredicate(format: "workoutRepeat = false AND workoutDate BETWEEN %@", [startDate, endDate])
         let compound = NSCompoundPredicate(type: .or, subpredicates: [predicateRepeat, predicateUnrepeat])
         
         let resultArray = RealmManager.shared.getResultWorkoutModel()
-        let filteredArray = resultArray.filter(compound).sorted(byKeyPath: "workoutName")
-        workoutArray = filteredArray.map {$0 }
+        let filtredArray = resultArray.filter(compound).sorted(byKeyPath: "workoutName")
+        workoutArray = filtredArray.map { $0 }
     }
     
     private func checkWorkoutToday() {
@@ -118,20 +119,41 @@ class MainViewController: UIViewController {
         tableView.isHidden = workoutArray.isEmpty
     }
     
-    private func deleteAndReloadDateInWorkoutArray() {
-        tableView.setWorkoutsArray(workoutArray)
-        tableView.reloadData()
-        checkWorkoutToday()
+    private func setupUserParameters() {
+        let userArray = RealmManager.shared.getResultUserModel()
+        
+        if !userArray.isEmpty {
+            userNameLabel.text = userArray[0].userFirstName + " " + userArray[0].userSecondName
+  
+            guard let data = userArray[0].userImage,
+                  let image = UIImage(data: data) else {
+                return
+            }
+            userPhotoImageView.image = image
+        }
+    }
+    
+    func getWeather() {
+        NetworkDataFetch.shared.fetchWeather { [weak self] result, error in
+            guard let self else { return }
+            if let model = result {
+                print(model)
+            }
+            if let error {
+                self.presentSimpleAlert(title: "Error", message: error.localizedDescription)
+            }
+        }
     }
 }
 
-//MARK: CalendarViewProtocol
-
+//MARK: - CalendarViewProtocol
+ 
 extension MainViewController: CalendarViewProtocol {
-    
     func selectItem(date: Date) {
         getWorkouts(date: date)
-        deleteAndReloadDateInWorkoutArray()
+        tableView.setWorkoutsArray(workoutArray)
+        tableView.reloadData()
+        checkWorkoutToday()
     }
 }
 
@@ -209,5 +231,3 @@ extension MainViewController {
         ])
     }
 }
-
-
