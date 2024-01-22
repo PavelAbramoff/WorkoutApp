@@ -44,6 +44,10 @@
 		128E33232B578F4700098529 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E33222B578F4700098529 /* ProfileViewController.swift */; };
 		128E33262B57901A00098529 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E33252B57901A00098529 /* SettingsViewController.swift */; };
 		128E33282B5790E200098529 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E33272B5790E200098529 /* UserModel.swift */; };
+		128E332B2B5BA21E00098529 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E332A2B5BA21E00098529 /* Notifications.swift */; };
+		128E332D2B5E551C00098529 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E332C2B5E551C00098529 /* WeatherModel.swift */; };
+		128E33302B5E588300098529 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E332F2B5E588300098529 /* NetworkRequest.swift */; };
+		128E33322B5E5D8200098529 /* NetworkDataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E33312B5E5D8200098529 /* NetworkDataFetch.swift */; };
 		12A7A7D92AF823A60028CE0F /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7D82AF823A60028CE0F /* MainTableView.swift */; };
 		12A7A7DB2AF82A1E0028CE0F /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7DA2AF82A1E0028CE0F /* WorkoutTableViewCell.swift */; };
 		12A7A7DD2AF8423D0028CE0F /* UIStackView + Extancsons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7DC2AF8423D0028CE0F /* UIStackView + Extancsons.swift */; };
@@ -118,6 +122,10 @@
 		128E33222B578F4700098529 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		128E33252B57901A00098529 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		128E33272B5790E200098529 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		128E332A2B5BA21E00098529 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		128E332C2B5E551C00098529 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		128E332F2B5E588300098529 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		128E33312B5E5D8200098529 /* NetworkDataFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetch.swift; sourceTree = "<group>"; };
 		12A7A7D82AF823A60028CE0F /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
 		12A7A7DA2AF82A1E0028CE0F /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		12A7A7DC2AF8423D0028CE0F /* UIStackView + Extancsons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extancsons.swift"; sourceTree = "<group>"; };
@@ -249,6 +257,7 @@
 				128E331D2B578E6300098529 /* ProfileModule */,
 				128E33242B578FF700098529 /* SettingsModule */,
 				127867312AFF619600437517 /* Service */,
+				128E332E2B5E57A700098529 /* Network */,
 				124DB1522AE8F36F003F0370 /* Extansions */,
 				124DB14F2AE8F32A003F0370 /* SupportingFiles */,
 			);
@@ -288,6 +297,7 @@
 			children = (
 				124DB1212AE8E064003F0370 /* SceneDelegate.swift */,
 				124DB11F2AE8E064003F0370 /* AppDelegate.swift */,
+				128E332A2B5BA21E00098529 /* Notifications.swift */,
 			);
 			name = Applicaton;
 			sourceTree = "<group>";
@@ -318,6 +328,7 @@
 			children = (
 				1278672D2AFE0C1B00437517 /* WorkoutModel.swift */,
 				128E33272B5790E200098529 /* UserModel.swift */,
+				128E332C2B5E551C00098529 /* WeatherModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -420,6 +431,15 @@
 				128E33252B57901A00098529 /* SettingsViewController.swift */,
 			);
 			name = SettingsModule;
+			sourceTree = "<group>";
+		};
+		128E332E2B5E57A700098529 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				128E332F2B5E588300098529 /* NetworkRequest.swift */,
+				128E33312B5E5D8200098529 /* NetworkDataFetch.swift */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 		12A7A7DE2AF8801B0028CE0F /* StatisticModule */ = {
@@ -668,11 +688,14 @@
 				124DB15B2AE8F47E003F0370 /* CalendarCollectionView.swift in Sources */,
 				12A7A7FF2AFC8EA80028CE0F /* RepsOrTimerView.swift in Sources */,
 				120F507F2B4BDB1C00EECD40 /* TimerWorkoutParametrsView.swift in Sources */,
+				128E33322B5E5D8200098529 /* NetworkDataFetch.swift in Sources */,
 				12ACC9D32AF814A600D5DBB8 /* UILabel + Extensions.swift in Sources */,
+				128E332D2B5E551C00098529 /* WeatherModel.swift in Sources */,
 				120F50782B4B9EEA00EECD40 /* RepsWorkoutViewController.swift in Sources */,
 				12A7A7F42AFA0D160028CE0F /* NameView.swift in Sources */,
 				12A7A7EF2AF8CA870028CE0F /* NewWorkoutViewsController.swift in Sources */,
 				120F507A2B4BA80A00EECD40 /* WorkoutParametrsView.swift in Sources */,
+				128E332B2B5BA21E00098529 /* Notifications.swift in Sources */,
 				12A7A7FD2AFC7DCC0028CE0F /* SliderView.swift in Sources */,
 				12A7A7EA2AF8B6980028CE0F /* MainTabBarController.swift in Sources */,
 				124DB1242AE8E064003F0370 /* MainViewController.swift in Sources */,
@@ -701,6 +724,7 @@
 				124DB1642AE8F517003F0370 /* UIView + Extensions.swift in Sources */,
 				12A7A7F82AFB496C0028CE0F /* DataAndRepeatView.swift in Sources */,
 				128E33212B578EF500098529 /* ProfileCollectionViewCell.swift in Sources */,
+				128E33302B5E588300098529 /* NetworkRequest.swift in Sources */,
 				128E33282B5790E200098529 /* UserModel.swift in Sources */,
 				12A7A7E72AF889330028CE0F /* StatisticTableViewCell.swift in Sources */,
 				128E33232B578F4700098529 /* ProfileViewController.swift in Sources */,
