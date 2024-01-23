@@ -62,6 +62,44 @@ class WeatherView: UIView {
         addSubview(weatherStatusLabel)
         addSubview(weatherDiscriptionLabel)
     }
+    
+    func updateImage(data: Data) {
+        guard let image = UIImage(data: data) else { return }
+        weatherIconImageView.image = image
+    }
+    
+    func updateLabels(model: WeatherModel) {
+        weatherStatusLabel.text = model.weather[0].myDescription + " " +  "\(model.main.temperatureCesius)°C"
+        switch model.weather[0].weatherDescription {
+            case "clear sky":
+                weatherDiscriptionLabel.text = "Good weather for outdoor training"
+
+        case "few clouds":
+            weatherDiscriptionLabel.text = "Good weather for outdoor training"
+        case "scattered clouds":
+            weatherDiscriptionLabel.text = "Good weather for outdoor training"
+        case "broken clouds":
+            weatherDiscriptionLabel.text = "Good weather for outdoor training"
+        case "shower rain":
+            weatherDiscriptionLabel.text = "Good weather for training in the houme"
+        case "rain":
+            weatherDiscriptionLabel.text = "The best weather for training in the gym"
+        case "thunderstorm":
+            weatherDiscriptionLabel.text = "The best weather for training in the gym"
+        case "snow":
+            weatherDiscriptionLabel.text = "The best weather for training in the gym"
+        case "mist":
+            weatherDiscriptionLabel.text = "The best weather for training in the gym"
+        case "overcast clouds":
+            weatherDiscriptionLabel.text = "The best weather for training in the gym"
+        case "moderate rain":
+            weatherDiscriptionLabel.text = "The best weather for training in the gym"
+        case "light rain":
+            weatherDiscriptionLabel.text = "The best weather for training in the gym"
+            default:
+            weatherDiscriptionLabel.text = "No data"
+        }
+    }
 }
 
 //MARK: - Set Contraints

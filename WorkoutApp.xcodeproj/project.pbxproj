@@ -48,6 +48,7 @@
 		128E332D2B5E551C00098529 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E332C2B5E551C00098529 /* WeatherModel.swift */; };
 		128E33302B5E588300098529 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E332F2B5E588300098529 /* NetworkRequest.swift */; };
 		128E33322B5E5D8200098529 /* NetworkDataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E33312B5E5D8200098529 /* NetworkDataFetch.swift */; };
+		128E33342B5F901400098529 /* NetworkImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E33332B5F901300098529 /* NetworkImageRequest.swift */; };
 		12A7A7D92AF823A60028CE0F /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7D82AF823A60028CE0F /* MainTableView.swift */; };
 		12A7A7DB2AF82A1E0028CE0F /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7DA2AF82A1E0028CE0F /* WorkoutTableViewCell.swift */; };
 		12A7A7DD2AF8423D0028CE0F /* UIStackView + Extancsons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7DC2AF8423D0028CE0F /* UIStackView + Extancsons.swift */; };
@@ -126,6 +127,7 @@
 		128E332C2B5E551C00098529 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		128E332F2B5E588300098529 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		128E33312B5E5D8200098529 /* NetworkDataFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetch.swift; sourceTree = "<group>"; };
+		128E33332B5F901300098529 /* NetworkImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageRequest.swift; sourceTree = "<group>"; };
 		12A7A7D82AF823A60028CE0F /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
 		12A7A7DA2AF82A1E0028CE0F /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		12A7A7DC2AF8423D0028CE0F /* UIStackView + Extancsons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extancsons.swift"; sourceTree = "<group>"; };
@@ -438,6 +440,7 @@
 			children = (
 				128E332F2B5E588300098529 /* NetworkRequest.swift */,
 				128E33312B5E5D8200098529 /* NetworkDataFetch.swift */,
+				128E33332B5F901300098529 /* NetworkImageRequest.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -711,6 +714,7 @@
 				124DB16A2AE8F76C003F0370 /* CalendarCollectionViewCell.swift in Sources */,
 				12A7A7D92AF823A60028CE0F /* MainTableView.swift in Sources */,
 				12A7A7F22AFA00EC0028CE0F /* CloseButton.swift in Sources */,
+				128E33342B5F901400098529 /* NetworkImageRequest.swift in Sources */,
 				128E33262B57901A00098529 /* SettingsViewController.swift in Sources */,
 				124DB1622AE8F4F7003F0370 /* UIFont + Extensions.swift in Sources */,
 				12B54F8D2B45432F00393D84 /* DifferenceWorkout.swift in Sources */,
