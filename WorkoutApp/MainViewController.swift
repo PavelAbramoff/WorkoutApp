@@ -138,7 +138,17 @@ class MainViewController: UIViewController {
             guard let self else { return }
             if let model = result {
                 print(model)
+                self.weatherView.updateLabels(model: model)
+                NetworkImageRequest.shsred.recuestData(id: model.weather[0].icon) { result in
+                    switch result {
+                    case .success(let data):
+                        self.weatherView.updateImage(data: data)
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    }
+                }
             }
+            
             if let error {
                 self.presentSimpleAlert(title: "Error", message: error.localizedDescription)
             }
