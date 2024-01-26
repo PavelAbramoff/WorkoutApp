@@ -49,6 +49,8 @@
 		128E33302B5E588300098529 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E332F2B5E588300098529 /* NetworkRequest.swift */; };
 		128E33322B5E5D8200098529 /* NetworkDataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E33312B5E5D8200098529 /* NetworkDataFetch.swift */; };
 		128E33342B5F901400098529 /* NetworkImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E33332B5F901300098529 /* NetworkImageRequest.swift */; };
+		128E33372B62193900098529 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E33362B62193900098529 /* OnboardingCollectionViewCell.swift */; };
+		128E33392B621C0E00098529 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128E33382B621C0E00098529 /* OnboardingViewController.swift */; };
 		12A7A7D92AF823A60028CE0F /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7D82AF823A60028CE0F /* MainTableView.swift */; };
 		12A7A7DB2AF82A1E0028CE0F /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7DA2AF82A1E0028CE0F /* WorkoutTableViewCell.swift */; };
 		12A7A7DD2AF8423D0028CE0F /* UIStackView + Extancsons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7A7DC2AF8423D0028CE0F /* UIStackView + Extancsons.swift */; };
@@ -128,6 +130,8 @@
 		128E332F2B5E588300098529 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		128E33312B5E5D8200098529 /* NetworkDataFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetch.swift; sourceTree = "<group>"; };
 		128E33332B5F901300098529 /* NetworkImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageRequest.swift; sourceTree = "<group>"; };
+		128E33362B62193900098529 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		128E33382B621C0E00098529 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		12A7A7D82AF823A60028CE0F /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
 		12A7A7DA2AF82A1E0028CE0F /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		12A7A7DC2AF8423D0028CE0F /* UIStackView + Extancsons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extancsons.swift"; sourceTree = "<group>"; };
@@ -249,6 +253,7 @@
 		124DB11E2AE8E064003F0370 /* WorkoutApp */ = {
 			isa = PBXGroup;
 			children = (
+				128E33352B6218F800098529 /* OnBoardingModule */,
 				124DB1502AE8F341003F0370 /* Applicaton */,
 				12A7A7E82AF8B6640028CE0F /* NavigationModule */,
 				124DB1512AE8F358003F0370 /* MainModule */,
@@ -443,6 +448,31 @@
 				128E33332B5F901300098529 /* NetworkImageRequest.swift */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		128E33352B6218F800098529 /* OnBoardingModule */ = {
+			isa = PBXGroup;
+			children = (
+				128E333A2B621C1700098529 /* Views */,
+				128E333B2B621C2600098529 /* Controllers */,
+			);
+			name = OnBoardingModule;
+			sourceTree = "<group>";
+		};
+		128E333A2B621C1700098529 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				128E33362B62193900098529 /* OnboardingCollectionViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		128E333B2B621C2600098529 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				128E33382B621C0E00098529 /* OnboardingViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		12A7A7DE2AF8801B0028CE0F /* StatisticModule */ = {
@@ -700,6 +730,7 @@
 				120F507A2B4BA80A00EECD40 /* WorkoutParametrsView.swift in Sources */,
 				128E332B2B5BA21E00098529 /* Notifications.swift in Sources */,
 				12A7A7FD2AFC7DCC0028CE0F /* SliderView.swift in Sources */,
+				128E33372B62193900098529 /* OnboardingCollectionViewCell.swift in Sources */,
 				12A7A7EA2AF8B6980028CE0F /* MainTabBarController.swift in Sources */,
 				124DB1242AE8E064003F0370 /* MainViewController.swift in Sources */,
 				1278672A2AFDE21100437517 /* SliderType.swift in Sources */,
@@ -724,6 +755,7 @@
 				124DB15D2AE8F49F003F0370 /* WeatherView.swift in Sources */,
 				124DB1592AE8F459003F0370 /* CalendarView.swift in Sources */,
 				1278672C2AFE053E00437517 /* Int + Extencion.swift in Sources */,
+				128E33392B621C0E00098529 /* OnboardingViewController.swift in Sources */,
 				127867332AFF61C400437517 /* RealmManager.swift in Sources */,
 				124DB1642AE8F517003F0370 /* UIView + Extensions.swift in Sources */,
 				12A7A7F82AFB496C0028CE0F /* DataAndRepeatView.swift in Sources */,
