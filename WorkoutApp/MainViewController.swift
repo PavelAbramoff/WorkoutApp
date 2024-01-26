@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
         imageView.layer.borderColor = UIColor.white.cgColor
         imageView.layer.borderWidth = 5
         imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -69,6 +70,10 @@ class MainViewController: UIViewController {
         super.viewWillAppear(animated)
         selectItem(date: Date())
         setupUserParameters()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        showOnboarding()
     }
   
     override func viewDidLoad() {
@@ -152,6 +157,16 @@ class MainViewController: UIViewController {
             if let error {
                 self.presentSimpleAlert(title: "Error", message: error.localizedDescription)
             }
+        }
+    }
+    
+    private func showOnboarding() {
+        let userDefaults = UserDefaults.standard
+        let onBoardinngWasViewed = userDefaults.bool(forKey: "OnBoardingWasViewed")
+        if onBoardinngWasViewed == false {
+            let onboardingViewController = OnboardingViewController()
+            onboardingViewController.modalPresentationStyle = .fullScreen
+            present(onboardingViewController, animated: true)
         }
     }
 }
